@@ -1,0 +1,42 @@
+services:
+  app:
+    image: hello-front1
+    build:
+      context: ./Frontend # The context will pick this directory as the "build context"
+      dockerfile: dev.Dockerfile # This will simply tell which dockerfile to read
+    volumes:
+      - ./Frontend/:/usr/src/app # The path can be relative, so ./ is enough to say "the same location as the docker-compose.yml"
+    ports:
+      - 5173:5173
+    container_name: hello-front1 # This will name the container hello-front-dev
+    environment:
+      - VITE_BACKEND_URL=http://localhost:8080/persons
+    depends_on:
+      - backend
+    
+  backend:
+    image: back-dev1
+    build:
+      context: ./Backend # The context will pick this directory as the "build context"
+      dockerfile: dev.Dockerfile # This will simply tell which dockerfile to read
+    volumes:
+      - ./Backend/:/usr/src/app # The path can be relative, so ./ is enough to say "the same location as the docker-compose.yml"
+    ports:
+      - 3000:3000
+    container_name: back-dev1 # This will name the container hello-front-dev
+    environment:
+      MONGO_URL: MONGODB_URI
+    
+    
+  nginx:
+    image: nginx:1.20.1
+    volumes:
+      - ./nginx.dev.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - 8080:80
+    container_name: reverse-proxy5
+    depends_on:
+      - app # wait for the frontend container t
+      - backend
+    
+  

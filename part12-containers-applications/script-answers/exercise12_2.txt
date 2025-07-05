@@ -1,0 +1,18 @@
+Script started on Wed Jul  2 23:36:35 2025
+Restored session: Wed Jul  2 19:33:14 IST 2025
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Ramandeeps-MacBook-Pro.local/Users/ramandeepkaur/part12-containers-applications[0m[27m[24m[J(base) ramandeepkaur@Ramandeeps-MacBook-Pro part12-containers-applications % [K[?2004h[7mdoc[7mk[7mer container run -it ubuntu bash[27m[K[A[44C[27md[27mo[27mck[27me[27mr[27m [27mc[27mo[27mn[27mt[27ma[27mi[27mn[27me[27mr[27m [27mr[27mu[27mn[27m [27m-[27mi[27mt[27m [27mu[27mb[27mu[27mn[27mt[27mu[27m [27mb[27ma[27ms[27mh[?2004l
+[?2004h]0;root@d1f4281e3981: /root@d1f4281e3981:/# -p /usr/src/app               mkdir -p /usr/src/app
+[?2004l[?2004h]0;root@d1f4281e3981: /root@d1f4281e3981:/# cd  [7mecho 'console.log("Hello from inside the container!");' > /[27m[7mu[27m[7musr/src/app/index.js[27m[A echo 'console.log("Hello from inside the container!");' > /usr/src/app/index.js
+[?2004l[?2004h]0;root@d1f4281e3981: /root@d1f4281e3981:/# [Kexit    cat     [7mcat /usr/src/app/index.js[27m
+[Aroot@d1f4281e3981:/# cat /usr/src/app/index.js
+[A
+[?2004lconsole.log("Hello from inside the container!");
+[?2004h]0;root@d1f4281e3981: /root@d1f4281e3981:/# [Kexit
+[?2004lexit
+[1m[7m%[27m[1m[0m                                                                                ]7;file://Ramandeeps-MacBook-Pro.local/Users/ramandeepkaur/part12-containers-applications[0m[27m[24m[J(base) ramandeepkaur@Ramandeeps-MacBook-Pro part12-containers-applications % [K[?2004heexi [Kt[?2004l
+
+Saving session...
+...saving history...truncating history files...
+...completed.
+
+Script done on Wed Jul  2 23:38:40 2025
