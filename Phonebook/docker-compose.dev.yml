@@ -10,7 +10,7 @@ services:
       - 5173:5173
     container_name: hello-front1 # This will name the container hello-front-dev
     environment:
-      - VITE_BACKEND_URL=http://localhost:8080/persons
+      - VITE_BACKEND_URL=http://localhost:8080/api/persons
     depends_on:
       - backend
     
