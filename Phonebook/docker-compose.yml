@@ -16,7 +16,7 @@ services:
       dockerfile: Dockerfile # This will simply tell which dockerfile to read
     container_name: hello-front-prod # This will name the container hello-front-dev
     environment:
-      - VITE_BACKEND_URL=http://localhost:8080/persons
+      - VITE_BACKEND_URL=http://localhost:8080/api/persons
     depends_on:
       - backend
     
